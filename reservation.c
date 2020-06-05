@@ -105,7 +105,7 @@ void printtime(void)
 		if (stat(path,&statbuf)==-1)
 			perror("Failed to get file status");
 		else 
-			printf("%s",ctime(&statbuf.st_atime));
+			printf("%s",ctime(&statbuf.st_ctime));
 	}
 
 	while ((fclose(myfd)==-1)&&(errno==EINTR));
